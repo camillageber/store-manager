@@ -22,5 +22,15 @@ describe('Testa a rota /products na camada Model', function () {
     expect(result).to.be.deep.equal(mockProduct.productsResult[0]);
   });
 
+  it('Testando a função createProduct para cadastrar um novo produto', async function () {
+    sinon.stub(connection, 'execute').resolves([{ insertId: 17 }])
+    
+    const newProduct = 'Cinto de utilidades do Batman';
+
+    const result = await productsModel.createProduct(newProduct);
+
+    expect(result).to.be.deep.equal(17);
+  });
+
   afterEach(() => sinon.restore());
 });
