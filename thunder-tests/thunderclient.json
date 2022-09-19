@@ -18,11 +18,11 @@
     "colId": "0e413ef9-33e1-4d67-8ff1-393ac5164bd2",
     "containerId": "",
     "name": "Buscar produto por id",
-    "url": "http://localhost:3000/products/1",
+    "url": "http://localhost:3000/products/4",
     "method": "GET",
     "sortNum": 20000,
     "created": "2022-09-16T17:13:58.153Z",
-    "modified": "2022-09-16T17:14:12.220Z",
+    "modified": "2022-09-19T21:05:25.947Z",
     "headers": [],
     "params": [],
     "tests": []
