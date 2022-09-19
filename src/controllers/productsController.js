@@ -14,7 +14,7 @@ const findProductsById = async (req, res) => {
   
   if (type) return res.status(mapError(type)).json({ message });
 
-  return res.status(200).json(message);
+  return res.status(200).json(message[0]);
 };
 
 const createProduct = async (req, res) => {
