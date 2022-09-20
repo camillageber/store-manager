@@ -7,7 +7,7 @@ const findProducts = async () => {
 
 const findProductsById = async (id) => {
   const result = await productsModel.findProductsById(id);
-  if (result.length === 0) {
+  if (!result.length) {
     return ({ type: 'PRODUCT_NOT_FOUND', message: 'Product not found' });
   }
   return { type: null, message: result };
@@ -19,8 +19,18 @@ const createProduct = async (product) => {
   return { type: null, message: { id, ...product } };
 };
 
+const updateProduct = async (id, upName) => {
+  const product = await productsModel.findProductsById(id);
+  if (!product.length) {
+    return ({ type: 'PRODUCT_NOT_FOUND', message: 'Product not found' });
+  }
+  const result = await productsModel.updateProduct(id, upName);
+  return { type: null, message: result };
+};
+
 module.exports = {
   findProducts,
   findProductsById,
   createProduct,
+  updateProduct,
 };

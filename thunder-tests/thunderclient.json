@@ -26,5 +26,24 @@
     "headers": [],
     "params": [],
     "tests": []
+  },
+  {
+    "_id": "7abb7c0b-ebb5-4457-94c0-4c11fa057a9f",
+    "colId": "0e413ef9-33e1-4d67-8ff1-393ac5164bd2",
+    "containerId": "",
+    "name": "Atualizar produto pelo id",
+    "url": "http://localhost:3000/products/1",
+    "method": "PUT",
+    "sortNum": 30000,
+    "created": "2022-09-20T16:22:18.626Z",
+    "modified": "2022-09-20T16:38:37.506Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Martelo do Batman\"\n}",
+      "form": []
+    },
+    "tests": []
   }
 ]
